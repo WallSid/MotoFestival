@@ -1,0 +1,171 @@
+@charset "UTF-8";
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: visibility 0.8s ease 0s;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  pointer-events: none;
+  z-index: 150;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+
+.popup__content {
+  transition: transform 0.3s ease 0s;
+  background-color: #1E1E1E;
+  padding: 70px;
+  width: 100%;
+  max-width: 1340px;
+  border-radius: 0;
+}
+
+.popup__closeBtnBlock {
+  display: flex;
+  justify-content: right;
+}
+
+.popup__close {
+  color: red;
+}
+
+.popup__text {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+.popup__header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: rem(60);
+}
+.popup__titles {
+  display: flex;
+  flex-direction: column;
+}
+.popup__subtitle {
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #8A8A8A;
+}
+.popup__title {
+  font-family: "Capture it";
+  font-size: rem(65);
+  line-height: 1.15;
+  /* identical to box height */
+  letter-spacing: 0.045em;
+  /* Оранжевый Градиент */
+  background: linear-gradient(265.96deg, #FF0301 0%, #FF3002 30.82%, #FF7301 106.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.popup__description {
+  max-width: 530px;
+  display: flex;
+  align-items: flex-end;
+  font-size: rem(20);
+  line-height: 150%;
+  /* or 30px */
+  color: #FFFFFF;
+  padding-bottom: rem(10);
+}
+.cards-popup__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: rem(30);
+}
+.cards-popup__item {
+  max-width: 300px;
+  text-align: center;
+  border: 2px solid #FF4002;
+  padding: rem(26) rem(33) 0 rem(33);
+}
+.cards-popup__title {
+  font-weight: 700;
+  font-size: rem(36);
+  line-height: 1.22;
+  color: #FF4002;
+}
+.cards-popup__subtitle {
+  font-size: 20px;
+  line-height: 150%;
+  color: #8A8A8A;
+  text-transform: lowercase;
+  padding-bottom: rem(20);
+}
+.cards-popup__description {
+  max-width: 236px;
+  font-size: rem(16);
+  line-height: 150%;
+  color: #4B4B4B;
+  padding-bottom: rem(25);
+}
+.cards-popup__price {
+  font-size: rem(36);
+  line-height: 1.22;
+  /* identical to box height */
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: rem(37);
+}
+.cards-popup__amountWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: rem(22.5) rem(33);
+  border-top: 2px solid #FF4002;
+}
+.cards-popup .cards-popup__minus,
+.cards-popup .cards-popup__value,
+.cards-popup .cards-popup__plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards-popup__minus {
+  font-size: rem(45);
+}
+.cards-popup__value {
+  font-size: rem(25);
+}
+.cards-popup__plus {
+  font-size: rem(45);
+}
+
+.footer-popup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(60) 0;
+}
+.footer-popup__summaryAmount {
+  font-size: rem(36);
+  line-height: 1.22;
+}/*# sourceMappingURL=popup.css.map */

@@ -1,0 +1,58 @@
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot?kp77r9");
+  src: url("../fonts/icons.eot?kp77r9#iefix") format("embedded-opentype"), url("../fonts/icons.ttf?kp77r9") format("truetype"), url("../fonts/icons.woff?kp77r9") format("woff"), url("../fonts/icons.svg?kp77r9#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=_icon-]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-cross:before {
+  content: "\ea0f";
+}
+
+._icon-instagramBig:before {
+  content: "\e900";
+}
+
+._icon-calendar:before {
+  content: "\e901";
+}
+
+._icon-cart:before {
+  content: "\e902";
+}
+
+._icon-placeholder:before {
+  content: "\e903";
+}
+
+._icon-facebook:before {
+  content: "\e904";
+}
+
+._icon-instMini:before {
+  content: "\e905";
+}
+
+._icon-ticket:before {
+  content: "\e906";
+}
+
+._icon-arrow:before {
+  content: "\e907";
+}/*# sourceMappingURL=iconsfont.css.map */
