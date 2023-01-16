@@ -137,11 +137,17 @@ window.addEventListener("click", function(e) {
 function calcPrice() {
   const cardsWrapper = document.querySelectorAll("[data-popupWrapper]");
   
-  cardsWrapper.forEach(item) {
-    const totalPrice = cardsWrapper.querySelector("[data-totalAmount]");
-    const ticketPrice = item.querySelector("[data-price]")
-    totalPrice.innerText = 
-  }
+  cardsWrapper.forEach(function (item) {
+    const cards = item.querySelectorAll("[data-card]");
+    cards.forEach(function (item) {
+      // const totalPrice = item.querySelector("[data-totalAmount]");
+      const ticketPrice = item.querySelector("[data-price]");
+      console.log(ticketPrice);
+    });
+
+    // console.log(ticketPrice);
+    // totalPrice.innerText = 
+  });
   console.log(cardsWrapper);
-  console.log(totalPrice);
+  // console.log(totalPrice);
 }
