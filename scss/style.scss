@@ -1561,3 +1561,182 @@ body._touch .menu__arrow {
 
 
 
+
+
+
+
+// aboutFest_section ================================================
+
+.page__aboutFest {
+	padding: 200px 0px 200px 0px;
+}
+
+.aboutFest__body {
+	display: flex;
+	flex-direction: row;
+	// align-items: center;
+	column-gap: rem(60);
+
+}
+.aboutFest__video {
+	flex: 1 0 50%;
+	& img {
+		max-width: 100%;
+	}
+}
+.aboutFest__text {
+	display: flex;
+	flex-direction: column;
+}
+
+
+.text-aboutFest__inner {
+	flex: 1 1 100%;
+	&:not(:last-child) {
+		padding-bottom: rem(10);
+	}
+}
+
+.text-aboutFest__suptitle {
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 150%;
+
+	text-transform: uppercase;
+
+	color: #8A8A8A;
+
+	padding-bottom: rem(13);
+}
+.text-aboutFest__title {
+	font-family: 'Capture it';
+	font-size: rem(55);
+	line-height: 105%; /* 75/65 */
+	letter-spacing: 0.045em;
+	
+	&:not(:last-child) {
+		padding-bottom: rem(30);
+	}
+
+	/* Оранжевый Градиент */
+
+	background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+.text-aboutFest__description {
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #FFFFFF;
+
+	max-width: 640px;
+}
+
+.aboutFest-counterBlock__items {
+	display: flex;
+	flex-direction: row;
+	column-gap: 19px;
+	> div {
+		flex: 1 1 33.333%;
+	}
+
+	padding-top: rem(15);
+	border-top: 2px solid #4B4B4B;
+}
+
+.aboutFest-counterBlock__itemCounter {
+	font-weight: 700;
+	font-size: rem(36);
+	line-height: 122%; /* 44/36 */
+
+	/* Оранжевый Кнопка */
+
+	color: #FF4002;
+}
+.aboutFest-counterBlock__itemDescription {
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #FFFFFF;
+}
+
+@media (max-width: 991px) {
+	.page__aboutFest {
+		padding: 100px 0px 100px 0px;
+	}
+
+	.aboutFest__body {
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+		row-gap: rem(20);
+	}
+
+	.aboutFest__video {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+
+@media (max-width: 767.98px) {
+	.page__aboutFest {
+		padding: 30px 0px 30px 0px;
+	}
+
+	.text-aboutFest__suptitle {
+		font-size: rem(12);
+
+		padding-bottom: rem(6);
+	}
+
+	.text-aboutFest__title {
+		font-size: rem(35);
+		&:not(:last-child) {
+			padding-bottom: rem(15);
+		}
+	}
+
+	.text-aboutFest__description {
+		font-size: rem(14);
+	}
+
+
+	.text-aboutFest__inner {
+		&:not(:last-child) {
+			padding-bottom: rem(5);
+		}
+	}
+
+	.aboutFest-counterBlock__items {
+		flex-direction: column;
+	}
+
+	.aboutFest-counterBlock__item {
+		display: flex;
+	}
+
+	.aboutFest-counterBlock__itemCounter {
+		flex: 0 1 15%;
+		font-size: rem(20);
+	}
+	.aboutFest-counterBlock__itemDescription {
+		// flex: 1 1 100%;
+		max-width: 100%;
+		font-size: rem(14);
+	}
+}
+
+@media (max-width: 375.98px) {
+	.text-aboutFest__title {
+		font-size: rem(25)
+	}
+}
+
+
+
