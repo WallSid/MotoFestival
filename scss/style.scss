@@ -1739,4 +1739,130 @@ body._touch .menu__arrow {
 }
 
 
+// festSchedule section
 
+.page__festSchedule {
+}
+.festSchedule__page {
+}
+.festSchedule__container {
+}
+.festSchedule__body {
+}
+.festSchedule__suptitle {
+}
+.festSchedule__title {
+}
+.festSchedule__tb {
+}
+.festSchedule__tb-items {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+.festSchedule__date {
+	font-weight: 700;
+	font-size: rem(36);
+	line-height: 122.222%; /* 44/36 */
+
+	color: #FF4002;
+
+	border-right: 2px solid #4B4B4B;;
+	> span {
+		font-weight: 400;
+		color: #4B4B4B;
+	}
+}
+.festSchedule__info {
+	padding-left: 70px;
+	// &:nth-of-type(1){
+	// 	padding-top: 70px;
+	// }
+	&:not(:last-of-type) {
+		padding-bottom: 70px;
+	}
+}
+.festSchedule__locationName {
+	font-size: rem(36);
+	line-height: 122.22%; /* 44/36 */
+
+	color: #FFFFFF;
+	&:not(:last-child) {
+		padding-bottom: 40px;
+	}
+}
+.festSchedule__description {
+}
+.festSchedule__description-items {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	row-gap: 2px;
+}
+.festSchedule__description-item {
+	flex: 1 1 50%;
+
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #FFFFFF;
+	position: relative;
+	padding-left: 15px;
+}
+
+.festSchedule__description-item:before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+
+.festSchedule__detailedInfo {
+	> button {
+		font-weight: 500;
+		font-size: rem(16);
+		line-height: 150%;
+
+		text-transform: uppercase;
+
+		color: #8A8A8A;
+	}
+	&:not(:first-child) {
+		padding-top: 40px;
+	}
+}
+.festSchedule__detailedInfo_block {
+}
+.detailedInfo_block {
+}
+.detailedInfo__title {
+}
+.detailedInfo__events {
+}
+.detailedInfo-events {
+}
+.detailedInfo-events__list {
+}
+.detailedInfo-events__list-items {
+}
+.detailedInfo__agenda {
+}
+.detailedInfo-agenda {
+}
+.detailedInfo-agenda__inner {
+}
+.detailedInfo-agenda__title {
+}
+.detailedInfo-agenda__list {
+}
+.detailedInfo-agenda__list-items {
+}
+.detailedInfo-agenda__list-item {
+}
+._date {
+}
+._name {
+}

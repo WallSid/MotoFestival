@@ -1219,4 +1219,74 @@ body._touch .menu__arrow {
   .text-aboutFest__title {
     font-size: 1.5625rem;
   }
+}
+.festSchedule__tb-items {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.festSchedule__date {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 122.222%; /* 44/36 */
+  color: #FF4002;
+  border-right: 2px solid #4B4B4B;
+}
+.festSchedule__date > span {
+  font-weight: 400;
+  color: #4B4B4B;
+}
+
+.festSchedule__info {
+  padding-left: 70px;
+}
+.festSchedule__info:not(:last-of-type) {
+  padding-bottom: 70px;
+}
+
+.festSchedule__locationName {
+  font-size: 2.25rem;
+  line-height: 122.22%; /* 44/36 */
+  color: #FFFFFF;
+}
+.festSchedule__locationName:not(:last-child) {
+  padding-bottom: 40px;
+}
+
+.festSchedule__description-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 2px;
+}
+
+.festSchedule__description-item {
+  flex: 1 1 50%;
+  font-size: 1.25rem;
+  line-height: 150%;
+  color: #FFFFFF;
+  position: relative;
+  padding-left: 15px;
+}
+
+.festSchedule__description-item:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.festSchedule__detailedInfo > button {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #8A8A8A;
+}
+.festSchedule__detailedInfo:not(:first-child) {
+  padding-top: 40px;
 }/*# sourceMappingURL=style.css.map */
