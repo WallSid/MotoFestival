@@ -32,11 +32,11 @@
 }
 :focus,
 :active {
-	// outline: none;
+	outline: none;
 }
 a:focus,
 a:active {
-	// outline: none;
+	outline: none;
 }
 html,
 body {
@@ -297,9 +297,7 @@ body {
 .menu {
     flex: 1 1 90%;
 }
-.menu__body {
 
-}
 
 .menu__list {
     li {
@@ -437,8 +435,6 @@ body._touch .menu__arrow {
 //==============================================//
 
 
-.actions__social {
-}
 .social__actions {
     display: flex;
     justify-content: center;
@@ -507,9 +503,7 @@ body._touch .menu__arrow {
 			span {
 				width: 0;
 			}
-			&::before,
-			&::after {
-			}
+
 			&::before {
 				top: calc(50% - 0.0625rem);
 				transform: rotate(-45deg);
@@ -662,12 +656,8 @@ body._touch .menu__arrow {
 			}
 		}
 	}
-	.burger__phone {
-		
-	}
-	.burger__mail {
-		
-	}
+
+
 }
 
 // =======================MAIN CONTENT===================================== //
@@ -710,7 +700,6 @@ body._touch .menu__arrow {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	text-fill-color: transparent;
 	&:not(:last-child) {
 		padding-bottom: rem(20);
 	}
@@ -976,7 +965,6 @@ body._touch .menu__arrow {
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-clip: text;
-		text-fill-color: transparent;
 	}
 
 	// .popup__description
@@ -999,8 +987,6 @@ body._touch .menu__arrow {
 
 	// .popup__cards
 
-	&__cards {
-	}
 }
 .cards-popup {
 
@@ -1159,20 +1145,6 @@ body._touch .menu__arrow {
 
 	// .footer-popup__button
 
-	&__button {
-	}
-}
-.btn {
-
-	// .btn__body
-
-	&__body {
-	}
-
-	// .btn__text
-
-	&__text {
-	}
 }
 
 @media (max-width: 767.98px) {
@@ -1248,18 +1220,6 @@ body._touch .menu__arrow {
 
 
 
-.popup {
-}
-.popup__body {
-}
-._popup2 {
-}
-.popup__content {
-}
-.popup__closeBtnBlock {
-}
-.popup__close {
-}
 .popup__inner {
 	display: flex;
 	column-gap: 80px;
@@ -1267,10 +1227,7 @@ body._touch .menu__arrow {
 		flex: 1 1 50%;
 	}
 }
-.popup__inputBlock {
-}
-.popup__title {
-}
+
 .form-popup {
 	display: flex;
 	flex-direction: column;
@@ -1333,8 +1290,7 @@ body._touch .menu__arrow {
 		color: #8A8A8A;
 	}
 }
-.popup__submitBlock {
-}
+
 .submitBlock-popup {
 	display: flex;
 	flex-direction: column;
@@ -1371,8 +1327,7 @@ body._touch .menu__arrow {
 
 	max-height: 48px;
 }
-.tickets {
-}
+
 .tickets__date {
 	flex: 0 0 20%;
 	text-align: left;
@@ -1405,12 +1360,7 @@ body._touch .menu__arrow {
 
 	padding: 8px 18px;
 }
-.quantity-tickets__minus {
-}
-.quantity-tickets__value {
-}
-.quantity-tickets__plus {
-}
+
 .submitBlock-popup__summaryAmount {
 	flex: 1 1 50%;
 	display: flex;
@@ -1435,10 +1385,6 @@ body._touch .menu__arrow {
 	}
 }
 
-.submitBlock-popup__summaryAmount_value {
-}
-.submitBlock-popup__description {
-}
 .btn__body._popup2 {
 	display: block;
 	width: 100%;
@@ -1446,8 +1392,7 @@ body._touch .menu__arrow {
 		width: 100%;
 	}
 }
-.btn__text {
-}
+
 .submitBlock-popup__ {
 	font-size: rem(20);
 	line-height: 1.5;
@@ -1624,7 +1569,6 @@ body._touch .menu__arrow {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	background-clip: text;
-	text-fill-color: transparent;
 }
 .text-aboutFest__description {
 	font-size: rem(20);
@@ -1661,6 +1605,12 @@ body._touch .menu__arrow {
 	line-height: 150%;
 
 	color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+	.text-aboutFest__title {
+		font-size: rem(45);
+	}
 }
 
 @media (max-width: 991px) {
@@ -1742,19 +1692,36 @@ body._touch .menu__arrow {
 // festSchedule section
 
 .page__festSchedule {
+	padding-bottom: 120px;
 }
-.festSchedule__page {
-}
-.festSchedule__container {
-}
-.festSchedule__body {
-}
+
 .festSchedule__suptitle {
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 150%;
+
+	text-transform: uppercase;
+
+	color: #8A8A8A;
+
 }
 .festSchedule__title {
+	font-family: 'Capture it';
+	font-size: rem(65);
+	line-height: 115.38%; /* 75/65 */
+
+	letter-spacing: 0.045em;
+
+	background: linear-gradient(265.99deg, #FF0301 44.63%, #FF3002 62.59%, #FF7301 106.91%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+
+	&:not(:last-child) {
+		padding-bottom: 70px;
+	}
 }
-.festSchedule__tb {
-}
+
 .festSchedule__tb-items {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
@@ -1766,21 +1733,30 @@ body._touch .menu__arrow {
 
 	color: #FF4002;
 
-	border-right: 2px solid #4B4B4B;;
+	border-right: 2px solid #4B4B4B;
+	// border-bottom:  2px solid #4B4B4B;
+
+	padding-top: 70px;
 	> span {
 		font-weight: 400;
 		color: #4B4B4B;
 	}
 }
 .festSchedule__info {
+	padding: 70px 0px 70px 70px;
+	padding-top: 70px;
 	padding-left: 70px;
-	// &:nth-of-type(1){
-	// 	padding-top: 70px;
-	// }
-	&:not(:last-of-type) {
-		padding-bottom: 70px;
-	}
 }
+
+.festSchedule__date,
+.festSchedule__info:not(:last-of-type) {
+	border-bottom: 2px solid #4B4B4B;
+}
+
+.festSchedule__date._noBorderBottom {
+	border-bottom: none;
+}
+
 .festSchedule__locationName {
 	font-size: rem(36);
 	line-height: 122.22%; /* 44/36 */
@@ -1790,8 +1766,7 @@ body._touch .menu__arrow {
 		padding-bottom: 40px;
 	}
 }
-.festSchedule__description {
-}
+
 .festSchedule__description-items {
 	display: flex;
 	flex-direction: row;
@@ -1821,7 +1796,10 @@ body._touch .menu__arrow {
 }
 
 .festSchedule__detailedInfo {
+	display: flex;
+	flex-direction: column-reverse;
 	> button {
+		text-align: left;
 		font-weight: 500;
 		font-size: rem(16);
 		line-height: 150%;
@@ -1834,35 +1812,193 @@ body._touch .menu__arrow {
 		padding-top: 40px;
 	}
 }
-.festSchedule__detailedInfo_block {
+._icon-arrow::before {
+	display: inline-block;
+	transition: transform 0.3s ease 0s;
+
+	color: #FF3002;
+	font-size: rem(20);
 }
-.detailedInfo_block {
+.festSchedule__detailedInfo button._active > ._icon-arrow::before {
+	transform: rotate(90deg);
 }
+
+.festSchedule__detailedInfo > button ._defaultBtn,
+.festSchedule__detailedInfo > button._active ._activeBtn {
+	display: inline-block;
+}
+
+.festSchedule__detailedInfo > button._active ._defaultBtn {
+	display: none;
+}
+.festSchedule__detailedInfo > button ._activeBtn {
+	display: none;
+	color: #fff;
+}
+
 .detailedInfo__title {
+	font-size: rem(36);
+	line-height: 122.22%; /* 44/36 */
+
+
+	color: #FF4002;
+	&:not(:last-child) {
+		padding-bottom: 20px;
+	}
 }
-.detailedInfo__events {
-}
-.detailedInfo-events {
-}
+
 .detailedInfo-events__list {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
 }
 .detailedInfo-events__list-items {
+	position: relative;
+	padding-left: 15px;
+
+	flex: 1 1 50%;
+
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #FFFFFF;
 }
-.detailedInfo__agenda {
+
+.detailedInfo-events__list-items::before {
+	content: "";
+	position: absolute;
+	top: 12px;
+	left: 0;
+	width: 6px;
+	height: 6px;
+	background-color: #fff;
+	border-radius: 50%;
 }
-.detailedInfo-agenda {
-}
-.detailedInfo-agenda__inner {
-}
+
 .detailedInfo-agenda__title {
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #FF4002;
+
+	&:not(:last-child) {
+		padding-bottom: 20px;
+	}
 }
 .detailedInfo-agenda__list {
+	padding-bottom: 30px;
 }
 .detailedInfo-agenda__list-items {
+	display: flex;
+	gap: 30px;
 }
-.detailedInfo-agenda__list-item {
+
+.detailedInfo-agenda__list-item._date,
+.detailedInfo-agenda__list-item._name {
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #FFFFFF;
 }
-._date {
+.detailedInfo-agenda__list-item._name {
+	color: #8A8A8A;
 }
-._name {
+
+@media (max-width: 767.98px) {
+	.page__festSchedule {
+		padding-bottom: 40px;
+	}
+
+	.festSchedule__tb-items {
+		grid-template-columns: 1fr;
+	}
+
+	.festSchedule__suptitle {
+		font-size: rem(13);
+	}
+
+	.festSchedule__title {
+		font-size: rem(38);
+	}
+
+	.festSchedule__title:not(:last-child) {
+		padding-bottom: 40px;
+	}
+
+	.festSchedule__date, 
+	.festSchedule__info:not(:last-of-type) {
+		border: none;
+	}
+
+	.festSchedule__date {
+		padding-top: 0;
+		font-size: rem(23);
+	}
+
+	.festSchedule__info {
+		padding: 30px 0px 30px 20px;
+	}
+
+	.festSchedule__locationName {
+		font-size: rem(23);
+		&:not(:last-child) {
+			padding-bottom: 20px;
+		}
+	}
+	.festSchedule__description-item {
+		font-size: rem(15);
+	}
+
+	.festSchedule__detailedInfo:not(:first-child) {
+		padding-top: 20px;
+	}
+
+	
+	.detailedInfo__title {
+		font-size: rem(28);
+	}
+
+	.detailedInfo-events__list-items {
+		font-size: rem(16);
+	}
+}
+
+@media (max-width: 375.98px) {
+	.page__festSchedule {
+		padding-bottom: 30px;
+	}
+
+	.festSchedule__description-item {
+		flex: 1 1 100%;
+	}
+
+	.detailedInfo__title {
+		font-size: rem(23);
+	}
+
+	.detailedInfo-events__list {
+		padding-bottom: 20px;
+	}
+
+	.detailedInfo-events__list-items {
+		font-size: rem(15);
+		flex: 1 1 100%;
+	}
+
+	.detailedInfo-agenda__list-item._date,
+	.detailedInfo-agenda__list-item._name {
+		font-size: rem(15);
+	}
+
+	.detailedInfo-agenda__list-items {
+		column-gap: 20px;
+	}
+
+	.detailedInfo-agenda__list-item._date {
+		min-width: 98px;
+	}
+
+	.festSchedule__detailedInfo > button {
+		font-size: rem(14);
+	}
 }
