@@ -30,14 +30,14 @@
     outline: none;
 
 }
-:focus,
-:active {
-	outline: none;
-}
-a:focus,
-a:active {
-	outline: none;
-}
+// :focus,
+// :active {
+// 	outline: none;
+// }
+// a:focus,
+// a:active {
+// 	outline: none;
+// }
 html,
 body {
 	height: 100%;
@@ -2002,3 +2002,152 @@ body._touch .menu__arrow {
 		font-size: rem(14);
 	}
 }
+
+
+// get ticket section start ===========================
+
+.page__getTicket {
+	background-image: url(../img/bg_maxDrive.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.getTicket__page {
+}
+.getTicket__body {
+	display: grid;
+	place-items: end;
+}
+.getTicket__container {
+}
+
+.getTicket__img {
+	display: none;
+}
+
+.getTicket__text-content {
+	max-width: 670px;
+	padding: 204px 0px 242px 0px;
+
+}
+.getTicket__suptitle {
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 150%;
+
+	text-transform: uppercase;
+
+	color: #8A8A8A;
+	&:not(:last-child) {
+		padding-bottom: 13px;
+	}
+}
+.getTicket__title {
+	font-family: 'Capture it';
+	font-size: rem(65);
+	line-height: 115.384615%; /* 75/65 */
+	letter-spacing: 0.045em;
+
+	&:not(:last-child) {
+		padding-bottom: 30px;
+	}
+
+	background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.getTicket__description {
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #FFFFFF;
+
+	&:not(:last-child) {
+		padding-bottom: 40px;
+	}
+}
+.getTicket__btn {
+	max-width: 259px;
+}
+
+
+@media (max-width: 1200px) {
+	.page__getTicket {
+		background: linear-gradient(178.98deg, #1E1E1E -90.46%, rgba(0, 0, 0, 0) 59.39%), linear-gradient(89.87deg, #202020 -12.18%, rgba(32, 32, 32, 0) 103.79%), url(../img/bg_maxDrive.jpg);
+		background-repeat: no-repeat;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.page__getTicket {
+		background: linear-gradient(94.52deg, #1f1a1aa0 9.63%, rgba(33, 26, 26, 0.355) 35.44%, rgba(37, 28, 28, 0.431577) 53.68%, rgba(29, 24, 24, 0) 85.21%), url(../img/bg_maxDrive_767px.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		object-fit: cover;
+	}
+
+	.getTicket__text-content {
+		padding: 40px 0px 80px 0px;
+	
+	}
+
+	.getTicket__suptitle {
+		font-size: rem(13);
+	}
+	.getTicket__title {
+		font-size: rem(45);
+	}
+	.getTicket__description {
+		font-size: rem(16);
+	}
+}
+
+@media (max-width: 425.98px) {
+	.getTicket__img {
+		display: block;
+		position: relative;
+		width: 100%;
+		img {
+			width: 100%;
+			object-fit: cover;
+			
+		}
+	}
+	.getTicket__img::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(rgba(37, 28, 28, 0.063) 53.68%, rgba(29, 24, 24, 0.71) 85.21%);
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+	.page__getTicket {
+		background: transparent;
+	}
+
+	.getTicket__text-content {
+		display: grid;
+	}
+
+	.getTicket__btn {
+		display: block;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 375.98px) {
+	.getTicket__title {
+		font-size: rem(38);
+	}
+	.getTicket__description {
+		font-size: rem(15);
+	}
+
+	.getTicket__btn .btn__text {
+		font-size: rem(14);
+	}
+}
+// get ticket section end ===========================
+
+
