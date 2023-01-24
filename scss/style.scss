@@ -1462,7 +1462,8 @@ body._touch .menu__arrow {
 }
 .aboutFest__video {
 	flex: 1 0 50%;
-	& img {
+	width: 50%;
+	& video {
 		max-width: 100%;
 	}
 }
@@ -2087,4 +2088,177 @@ body._touch .menu__arrow {
 }
 // get ticket section end ===========================
 
+// lineUP section start =============================
 
+.page__lineUp {
+}
+.lineUp__page {
+	padding: 200px 0px 150px 0px;
+}
+.lineUp__container {
+}
+.lineUp__body {
+}
+.lineUp__suptitle {
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 150%;
+
+	text-transform: uppercase;
+
+	color: #8A8A8A;
+	&:not(:last-child) {
+		padding-bottom: 13px;
+	}
+}
+.lineUp__title {
+	font-family: 'Capture it';
+	font-size: rem(65);
+	line-height: 115.38%; /* 75/65 */
+
+	letter-spacing: 0.045em;
+
+	background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	&:not(:last-child) {
+		padding-bottom: 50px;
+	}
+}
+.lineUp__schedule {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.lineUp__items {
+	flex: 1 1 50%;
+
+	padding: 0px 50px 55px 90px;
+	border-right: 2px solid #4B4B4B;
+	border-left: 2px solid #4B4B4B;
+}
+.lineUp__date {
+	font-weight: 700;
+	font-size: rem(36);
+	line-height: 122.22%; /* 44/36 */
+
+	color: #FF4002;
+
+	&:not(:last-child) {
+		padding-bottom: 65px;
+	}
+	span {
+		font-weight: 400;
+		color: #4B4B4B;
+	}
+}
+.lineUp__singers {
+}
+.lineUp-singers {
+	display: flex;
+	flex-direction: column;
+	row-gap: 50px;
+}
+.lineUp-singers__item {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 50px;
+}
+.lineUp-singer__img {
+	max-width: 206px;
+	max-height: 206px;
+	img {
+		width: 100%;
+		transition: transform 0.3s ease 0s;
+	}
+}
+
+.lineUp-singer__img:hover img {
+	transform: scale(1.3);
+}
+.lineUp-singer__text {
+}
+.lineUp-singers__name {
+	font-size: rem(30);
+	line-height: 122.22%; /* 44/36 */
+
+	color: #FFFFFF;
+}
+.lineUp-singer__time {
+	font-size: rem(20);
+	line-height: 150%;
+
+	color: #8A8A8A;
+}
+
+@media (max-width: 1200.98px) {
+	.lineUp__page {
+		padding: 100px 0px 75px 0px;
+	}
+
+	.lineUp-singers__item {
+		flex-direction: column;
+	}
+	.lineUp__items {
+		padding: 0px 45px 20px 45px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.lineUp__page {
+		padding: 30px 0px 20px 0px;
+	}
+
+	.lineUp__items {
+		padding: 0px 15px 20px 15px;
+	}
+	.lineUp-singers__item {
+		gap: 20px;
+	}
+	.lineUp__title {
+		font-size: rem(45);
+	}
+
+	.lineUp__date {
+		font-size: rem(28);
+	}
+
+	.lineUp-singers {
+		row-gap: 20px;
+	}
+
+	.lineUp-singers__name {
+		font-size: rem(23);
+	}
+	.lineUp-singer__time {
+		font-size: rem(15);
+	}
+}
+@media (max-width: 575.98px) {
+	.lineUp__schedule {
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px	;
+	}
+
+	.lineUp-singers__item {
+		flex-direction: row;
+	}
+
+	.lineUp-singer__img {
+		max-width: 150px;
+		flex: 1 1 40%;
+	}
+
+	.lineUp-singer__text {
+		flex: 1 1 100%;
+	}
+
+	.lineUp__items {
+		padding: 0px;
+		border: none;
+	}
+}
+// lineUP section end =============================

@@ -1092,8 +1092,9 @@ body._touch .menu__arrow {
 
 .aboutFest__video {
   flex: 1 0 50%;
+  width: 50%;
 }
-.aboutFest__video img {
+.aboutFest__video video {
   max-width: 100%;
 }
 
@@ -1632,5 +1633,156 @@ body._touch .menu__arrow {
   }
   .getTicket__btn .btn__text {
     font-size: 0.875rem;
+  }
+}
+.lineUp__page {
+  padding: 200px 0px 150px 0px;
+}
+
+.lineUp__suptitle {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #8A8A8A;
+}
+.lineUp__suptitle:not(:last-child) {
+  padding-bottom: 13px;
+}
+
+.lineUp__title {
+  font-family: "Capture it";
+  font-size: 4.0625rem;
+  line-height: 115.38%; /* 75/65 */
+  letter-spacing: 0.045em;
+  background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.lineUp__title:not(:last-child) {
+  padding-bottom: 50px;
+}
+
+.lineUp__schedule {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.lineUp__items {
+  flex: 1 1 50%;
+  padding: 0px 50px 55px 90px;
+  border-right: 2px solid #4B4B4B;
+  border-left: 2px solid #4B4B4B;
+}
+
+.lineUp__date {
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 122.22%; /* 44/36 */
+  color: #FF4002;
+}
+.lineUp__date:not(:last-child) {
+  padding-bottom: 65px;
+}
+.lineUp__date span {
+  font-weight: 400;
+  color: #4B4B4B;
+}
+
+.lineUp-singers {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.lineUp-singers__item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+.lineUp-singer__img {
+  max-width: 206px;
+  max-height: 206px;
+}
+.lineUp-singer__img img {
+  width: 100%;
+  transition: transform 0.3s ease 0s;
+}
+
+.lineUp-singer__img:hover img {
+  transform: scale(1.3);
+}
+
+.lineUp-singers__name {
+  font-size: 1.875rem;
+  line-height: 122.22%; /* 44/36 */
+  color: #FFFFFF;
+}
+
+.lineUp-singer__time {
+  font-size: 1.25rem;
+  line-height: 150%;
+  color: #8A8A8A;
+}
+
+@media (max-width: 1200.98px) {
+  .lineUp__page {
+    padding: 100px 0px 75px 0px;
+  }
+  .lineUp-singers__item {
+    flex-direction: column;
+  }
+  .lineUp__items {
+    padding: 0px 45px 20px 45px;
+  }
+}
+@media (max-width: 767.98px) {
+  .lineUp__page {
+    padding: 30px 0px 20px 0px;
+  }
+  .lineUp__items {
+    padding: 0px 15px 20px 15px;
+  }
+  .lineUp-singers__item {
+    gap: 20px;
+  }
+  .lineUp__title {
+    font-size: 2.8125rem;
+  }
+  .lineUp__date {
+    font-size: 1.75rem;
+  }
+  .lineUp-singers {
+    row-gap: 20px;
+  }
+  .lineUp-singers__name {
+    font-size: 1.4375rem;
+  }
+  .lineUp-singer__time {
+    font-size: 0.9375rem;
+  }
+}
+@media (max-width: 575.98px) {
+  .lineUp__schedule {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  .lineUp-singers__item {
+    flex-direction: row;
+  }
+  .lineUp-singer__img {
+    max-width: 150px;
+    flex: 1 1 40%;
+  }
+  .lineUp-singer__text {
+    flex: 1 1 100%;
+  }
+  .lineUp__items {
+    padding: 0px;
+    border: none;
   }
 }/*# sourceMappingURL=style.css.map */
