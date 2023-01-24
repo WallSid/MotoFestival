@@ -566,6 +566,11 @@ body._touch .menu__arrow {
   padding-left: 0.625rem;
 }
 
+@media (max-width: 767.98px) {
+  .main__page {
+    padding: 153px 0px;
+  }
+}
 .popup {
   position: fixed;
   top: 0;
