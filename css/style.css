@@ -1802,6 +1802,9 @@ body._touch .menu__arrow {
   text-transform: uppercase;
   color: #8A8A8A;
 }
+.gallery__subtitle:not(:last-child) {
+  padding-bottom: 0.8125rem;
+}
 
 .gallery__title {
   font-family: "Capture it", sans-serif;
@@ -1811,6 +1814,9 @@ body._touch .menu__arrow {
   background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.gallery__title:not(:last-child) {
+  padding-bottom: 1.4375rem;
 }
 
 .gallery__subscription {
@@ -1823,6 +1829,7 @@ body._touch .menu__arrow {
   display: grid;
   gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding-top: 90px;
 }
 
 .gallery__item {
@@ -1843,4 +1850,84 @@ body._touch .menu__arrow {
 .gallery__item_BIG {
   grid-column: span 2;
   grid-row: span 2;
+}
+
+.page__FAQ {
+  padding: 200px 0;
+}
+
+.FAQ__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FAQ__suptitle {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #8A8A8A;
+}
+
+.FAQ__title {
+  font-family: "Capture it", sans-serif;
+  font-size: 4.0625rem;
+  line-height: 115.38%; /* 75/65 */
+  letter-spacing: 0.045em;
+  background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.spollers-FAQ__items {
+  padding-bottom: 40px;
+  border-bottom: 2px solid #4B4B4B;
+}
+.spollers-FAQ__items:not(:first-child) {
+  padding-top: 40px;
+}
+
+.spollers-FAQ__btn {
+  font-size: 2.25rem;
+  line-height: 122.22%; /* 44/36 */
+  color: #fff;
+  transition: color 0.3s ease 0s;
+}
+
+.spollers-FAQ__btn._active {
+  color: #FF3002;
+}
+
+.spollers-FAQ__btn ._icon-arrow::before {
+  padding-right: 15px;
+  font-size: 1.875rem;
+}
+
+.spollers-FAQ__list {
+  padding: 50px 0 0 0;
+}
+
+.spollers-FAQ__list-item {
+  position: relative;
+  font-size: 20px;
+  line-height: 150%;
+  color: #8A8A8A;
+  padding-left: 60px;
+}
+.spollers-FAQ__list-item a {
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-decoration: underline;
+  color: #FF4002;
+}
+
+.spollers-FAQ__list-item::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 45px;
+  width: 6px;
+  height: 6px;
+  background-color: #8A8A8A;
+  border-radius: 50%;
 }/*# sourceMappingURL=style.css.map */

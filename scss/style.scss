@@ -2290,6 +2290,9 @@ body._touch .menu__arrow {
 	text-transform: uppercase;
 
 	color: #8A8A8A;
+	&:not(:last-child) {
+		padding-bottom: rem(13);
+	}
 }
 .gallery__title {
 	font-family: 'Capture it', sans-serif;
@@ -2301,6 +2304,9 @@ body._touch .menu__arrow {
 	background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	&:not(:last-child) {
+		padding-bottom: rem(23);
+	}
 }
 .gallery__subscription {
 	font-size: rem(20);
@@ -2312,6 +2318,7 @@ body._touch .menu__arrow {
 	display: grid;
 	gap: 20px;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	padding-top: 90px;
 }
 .gallery__item {
 	position: relative;
@@ -2332,3 +2339,102 @@ body._touch .menu__arrow {
 	grid-row: span 2;
 }
 // gallery section end ==========================
+
+
+// spollers block start ========================
+
+.page__FAQ {
+	padding: 200px 0;
+}
+.FAQ__page {
+}
+.FAQ__container {
+	display: flex;
+	justify-content: space-between;
+}
+.FAQ__title-block {
+}
+.FAQ__suptitle {
+	font-weight: 500;
+	font-size: rem(16);
+	line-height: 150%;
+
+	text-transform: uppercase;
+
+	color: #8A8A8A;
+}
+.FAQ__title {
+	font-family: 'Capture it', sans-serif;
+	font-size: rem(65);
+	line-height: 115.38%; /* 75/65 */
+
+	letter-spacing: 0.045em;
+
+	background: linear-gradient(265.96deg, #FF015E 0%, #FF3002 30.82%, #FF7301 106.91%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.FAQ__spollers  {
+}
+.spollers-FAQ {
+}
+
+.spollers-FAQ__items {
+	padding-bottom: 40px;
+
+	border-bottom: 2px solid #4B4B4B;
+	&:not(:first-child) {
+		padding-top: 40px;
+	}
+}
+.spollers-FAQ__btn {
+	font-size: rem(36);
+	line-height: 122.22%; /* 44/36 */
+
+	color: #fff;
+
+	transition: color 0.3s ease 0s;
+}
+
+.spollers-FAQ__btn._active {
+	color: #FF3002;
+}
+
+.spollers-FAQ__btn ._icon-arrow::before {
+	padding-right: 15px;
+	font-size: rem(30);
+}
+
+._icon-arrow {
+}
+.spollers-FAQ__list {
+	padding: 50px 0 0 0;
+}
+.spollers-FAQ__list-item {
+	position: relative;
+	font-size: 20px;
+	line-height: 150%;
+
+	color: #8A8A8A;
+
+	padding-left: 60px;
+	a {
+		font-size: rem(20);
+		line-height: 150%;
+		text-decoration: underline;
+		color: #FF4002;
+	}
+}
+
+.spollers-FAQ__list-item::before {
+	content: "";
+	position: absolute;
+	top: 11px;
+	left: 45px;
+	width: 6px;
+	height: 6px;
+	background-color: #8A8A8A;
+	border-radius: 50%;
+}
+
+// spollers block end ========================
