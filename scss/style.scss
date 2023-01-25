@@ -2338,6 +2338,23 @@ body._touch .menu__arrow {
 	grid-column: span 2;
 	grid-row: span 2;
 }
+
+@media (max-width: 559.98px) {
+	.gallery__items {
+		justify-content: center;
+	}
+	.gallery__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+}
+
 // gallery section end ==========================
 
 
@@ -2351,6 +2368,7 @@ body._touch .menu__arrow {
 .FAQ__container {
 	display: flex;
 	justify-content: space-between;
+	gap: 40px;
 }
 .FAQ__title-block {
 }
@@ -2388,6 +2406,8 @@ body._touch .menu__arrow {
 	}
 }
 .spollers-FAQ__btn {
+	display: flex;
+    justify-content: space-around;
 	font-size: rem(36);
 	line-height: 122.22%; /* 44/36 */
 
@@ -2400,9 +2420,13 @@ body._touch .menu__arrow {
 	color: #FF3002;
 }
 
+.spollers-FAQ__btn._active ._icon-arrow::before {
+	transform: rotate(90deg);
+}
+
 .spollers-FAQ__btn ._icon-arrow::before {
 	padding-right: 15px;
-	font-size: rem(30);
+	font-size: rem(25);
 }
 
 ._icon-arrow {
@@ -2437,4 +2461,30 @@ body._touch .menu__arrow {
 	border-radius: 50%;
 }
 
+@media (max-width: 1200px) {
+	.page__FAQ {
+		padding: 100px 0px;
+	}
+
+	.spollers-FAQ__btn {
+		font-size: rem(23);
+	}
+}
+
+@media (max-width: 991.98px) {
+	.spollers-FAQ__btn {
+		font-size: rem(20);
+	}
+}
+@media (max-width: 767.98px) {
+	.page__FAQ {
+		padding: 30px 0px;
+	}
+	.FAQ__container {
+		flex-direction: column;
+	}
+	.spollers-FAQ__btn {
+		font-size: rem(20);
+	}
+}
 // spollers block end ========================

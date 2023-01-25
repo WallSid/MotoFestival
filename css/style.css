@@ -1852,6 +1852,20 @@ body._touch .menu__arrow {
   grid-row: span 2;
 }
 
+@media (max-width: 559.98px) {
+  .gallery__items {
+    justify-content: center;
+  }
+  .gallery__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .gallery__item img {
+    text-align: center;
+    width: 100%;
+  }
+}
 .page__FAQ {
   padding: 200px 0;
 }
@@ -1859,6 +1873,7 @@ body._touch .menu__arrow {
 .FAQ__container {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .FAQ__suptitle {
@@ -1888,6 +1903,8 @@ body._touch .menu__arrow {
 }
 
 .spollers-FAQ__btn {
+  display: flex;
+  justify-content: space-around;
   font-size: 2.25rem;
   line-height: 122.22%; /* 44/36 */
   color: #fff;
@@ -1898,9 +1915,13 @@ body._touch .menu__arrow {
   color: #FF3002;
 }
 
+.spollers-FAQ__btn._active ._icon-arrow::before {
+  transform: rotate(90deg);
+}
+
 .spollers-FAQ__btn ._icon-arrow::before {
   padding-right: 15px;
-  font-size: 1.875rem;
+  font-size: 1.5625rem;
 }
 
 .spollers-FAQ__list {
@@ -1930,4 +1951,29 @@ body._touch .menu__arrow {
   height: 6px;
   background-color: #8A8A8A;
   border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+  .page__FAQ {
+    padding: 100px 0px;
+  }
+  .spollers-FAQ__btn {
+    font-size: 1.4375rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .spollers-FAQ__btn {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .page__FAQ {
+    padding: 30px 0px;
+  }
+  .FAQ__container {
+    flex-direction: column;
+  }
+  .spollers-FAQ__btn {
+    font-size: 1.25rem;
+  }
 }/*# sourceMappingURL=style.css.map */
