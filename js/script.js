@@ -44,9 +44,27 @@ if (isMobile.any()) {
 }
 
 
+
+// swiper 
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+    }
+});
+
 // Прокрутка при клике 
 
-const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+const menuLinks = document.querySelectorAll('._menu-link[data-goto]');
 if (menuLinks.length > 0) {
     menuLinks.forEach(menuLink => {
         menuLink.addEventListener("click", onMenuLinkClick);

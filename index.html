@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" href="./css/popup.css"> -->
     <link rel="stylesheet" href="./css/iconsfont.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <title>Moto</title>
 </head>
 <body>
@@ -22,32 +23,32 @@
                     <nav class="menu__body">
                         <ul class="menu__list">
                             <li>
-                                <a data-goto=".page__aboutFest" class="menu__link" href="#">
+                                <a data-goto=".page__aboutFest" class="menu__link _menu-link" href="#">
                                     Про нас
                                 </a>
                             </li>
                             <li>
-                                <a data-goto=".page__festSchedule" class="menu__link" href="#">
+                                <a data-goto=".page__festSchedule" class="menu__link _menu-link" href="#">
                                     Програма
                                 </a>
                             </li>
                             <li>
-                                <a data-goto=".page__lineUp" class="menu__link" target="_blank" href="https://www.google.com.ua">
+                                <a data-goto=".page__lineUp" class="menu__link _menu-link" target="_blank" href="https://www.google.com.ua">
                                     Line-Up
                                 </a>
                             </li>
                             <li>
-                                <a  class="menu__link" target="_blank" href="https://www.google.com.ua">
+                                <a data-goto=".page__gallery" class="menu__link _menu-link" target="_blank" href="https://www.google.com.ua">
                                     Галерея
                                 </a>
                             </li>
                             <li>
-                                <a  class="menu__link" target="_blank" href="https://www.google.com.ua">
+                                <a data-goto=".page__FAQ" class="menu__link _menu-link" target="_blank" href="https://www.google.com.ua">
                                     Партнери
                                 </a>
                             </li>
                             <li>
-                                <a  class="menu__link" target="_blank" href="https://www.google.com.ua">
+                                <a data-goto=".page__partners" class="menu__link _menu-link" target="_blank" href="https://www.google.com.ua">
                                     F.A.Q
                                 </a>
                             </li>
@@ -776,6 +777,41 @@
                             <img src="./img/gallery/10.jpg" alt="10">
                         </div>
                     </div>
+                    <div class="gallery__items swiper">
+                        <div class="gallery__items-inner swiper-wrapper">
+                            <div class="gallery__item swiper-slide">
+                                <img src="./img/gallery/1.jpg" alt="1">
+                            </div>
+                            <div class="gallery__item swiper-slide">
+                                <img src="./img/gallery/2.jpg" alt="2">
+                            </div>
+                            <div class="gallery__item  gallery__item_BIG swiper-slide">
+                                <img src="./img/gallery/3.jpg" alt="3">
+                            </div>
+                            <div class="gallery__item  swiper-slide">
+                                <img src="./img/gallery/4.jpg" alt="4">
+                            </div>
+                            <div class="gallery__item  swiper-slide">
+                                <img src="./img/gallery/5.jpg" alt="5">
+                            </div>
+                            <div class="gallery__item gallery__item_BIG swiper-slide">
+                                <img src="./img/gallery/6.jpg" alt="6">
+                            </div>
+                            <div class="gallery__item  swiper-slide">
+                                <img src="./img/gallery/7.jpg" alt="7">
+                            </div>
+                            <div class="gallery__item swiper-slide">
+                                <img src="./img/gallery/8.jpg" alt="8">
+                            </div>
+                            <div class="gallery__item swiper-slide">
+                                <img src="./img/gallery/9.jpg" alt="9">
+                            </div>
+                            <div class="gallery__item  swiper-slide">
+                                <img src="./img/gallery/10.jpg" alt="10">
+                            </div>
+                        </div>
+                        <div class="gallery swiper-pagination"></div>
+                    </div>
                 </div>
             </section>
             <section class="page__FAQ FAQ__page">
@@ -835,7 +871,30 @@
                         <div class="partners__img-block">
                             <div class="partners__img-items">
                                 <div class="partners__img-item">
-                                    <img src="" alt="">
+                                    <img src="./img/partners/1.png" alt="1">
+                                </div>
+                                <div class="partners__img-item">
+                                    <img src="./img/partners/2.png" alt="2">
+                                </div>
+                                <div class="partners__img-item">
+                                    <img src="./img/partners/3.png" alt="3">
+                                </div>
+                                <div class="partners__img-item">
+                                    <img src="./img/partners/4.png" alt="4">
+                                </div>
+                            </div>
+                            <div class="partners__img-items">
+                                <div class="partners__img-item">
+                                    <img src="./img/partners/5.png" alt="5">
+                                </div>
+                                <div class="partners__img-item">
+                                    <img src="./img/partners/6.png" alt="6">
+                                </div>
+                                <div class="partners__img-item">
+                                    <img src="./img/partners/7.png" alt="7">
+                                </div>
+                                <div class="partners__img-item">
+                                    <img src="./img/partners/8.png" alt="8">
                                 </div>
                             </div>
                         </div>
@@ -845,7 +904,33 @@
 
         </main>
         <footer class="footer">
-            footer
+            <div class="footer__container">
+                <div class="footer__logoContacts">
+                    <div class="footer__logo">
+                        <a href="#"><img src="./img/Logo.svg" alt="logo"></a>
+                    </div>
+                    <div class="footer__contacts footer-contacts">
+                        <div class="footer-contacts__phone">
+                            <a href="#">+380 (67) 226 44 04</a>
+                        </div>
+                        <div class="footer-contacts__email">
+                            <a href="#">fms.kiyv@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__menu footer-menu">
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__list-items"><a data-goto=".page__aboutFest" class="_menu-link" href="#">Про нас</a></li>
+                        <li class="footer-menu__list-items"><a data-goto=".page__festSchedule" class="_menu-link" href="#">Програма</a></li>
+                        <li class="footer-menu__list-items"><a data-goto=".page__lineUp" class="_menu-link" href="#">Line-Up</a></li>
+                    </ul>
+                    <ul class="footer-menu__list">
+                        <li class="footer-menu__list-items"><a data-goto=".page__gallery" class="_menu-link" href="#">Галерея</a></li>
+                        <li class="footer-menu__list-items"><a data-goto=".page__partners" class="_menu-link" href="#">Партнери</a></li>
+                        <li class="footer-menu__list-items"><a data-goto=".page__FAQ" class="_menu-link" href="#">F.A.Q</a></li>
+                    </ul>
+                </div>
+            </div>
         </footer>
     </div>
     <div id="popup" aria-hidden="true" class="popup">
@@ -1022,6 +1107,7 @@
         </div>
     </div>
     <script src="./js/popup.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
