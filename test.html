@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+			// $fn.scrollSpeed(step, speed, easing);
+			jQuery.scrollSpeed(200, 800);
+});
+
+// Custom scrolling speed with jQuery
+// Source: github.com/ByNathan/jQuery.scrollSpeed
+// Version: 1.0.2
+
+(function($) {
+    
+    jQuery.scrollSpeed = function(step, speed, easing) {
+        
+        var $document = $(document),
+            $window = $(window),
+            $body = $('html, body'),
+            option = easing || 'default',
+            root = 0,
+            scroll = false,
+            scrollY,
+            scrollX,
+            view;
+            
+        if (window.navigator.msPointerEnabled)
+        
+            return false;
+            
+        $window.on('mousewheel DOMMouseScroll', function(e) {
+            
+            var deltaY = e.originalEvent.wheelDeltaY,
+                detail = e.originalEvent.detail;
+                scrollY = $document.height() > $window.height();
+                scrollX = $document.width() > $window.width();
+                scroll = true;
+            
+            if (scrollY) {
+                
+                view = $window.height();
+                    
+                if (deltaY < 0 || detail > 0)
+            
+                    root = (root + view) >= $document.height() ? root : root += step;
+                
+                if (deltaY > 0 || detail < 0)
+            
+                    root = root <= 0 ? 0 : root -= step;
+                
+                $body.stop().animate({
+            
+                    scrollTop: root
+                
+                }, speed, option, function() {
+            
+                    scroll = false;
+                
+                });
+            }
+            
+            if (scrollX) {
+                
+                view = $window.width();
+                    
+                if (deltaY < 0 || detail > 0)
+            
+                    root = (root + view) >= $document.width() ? root : root += step;
+                
+                if (deltaY > 0 || detail < 0)
+            
+                    root = root <= 0 ? 0 : root -= step;
+                
+                $body.stop().animate({
+            
+                    scrollLeft: root
+                
+                }, speed, option, function() {
+            
+                    scroll = false;
+                
+                });
+            }
+            
+            return false;
+            
+        }).on('scroll', function() {
+            
+            if (scrollY && !scroll) root = $window.scrollTop();
+            if (scrollX && !scroll) root = $window.scrollLeft();
+            
+        }).on('resize', function() {
+            
+            if (scrollY && !scroll) view = $window.height();
+            if (scrollX && !scroll) view = $window.width();
+            
+        });       
+    };
+    
+    jQuery.easing.default = function (x,t,b,c,d) {
+    
+        return -c * ((t=t/d-1)*t*t*t - 1) + b;
+    };
+    
+})(jQuery);
+    </script>
+<style>
+.grey-arrow {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+.green-arrow {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 300ms;
+  transition-timing-function: ease;
+}
+
+.active {
+    opacity: 100;
+}
+.step-wrapper {
+    height: 2rem;
+}
+</style>
+<body>
+    <div class="">
+        <div class="form-steps__wrapper">
+            <div class="first-step__wrapper">
+                <img class="grey-arrow" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow active" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="second-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="third-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+        </div>
+        <button id="first-step" >first step button</button>
+        <button id="second-step" >second step button</button>
+        <button id="third-step" >third step button</button>
+    </div>    <div class="">
+        <div class="form-steps__wrapper">
+            <div class="first-step__wrapper">
+                <img class="grey-arrow" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow active" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="second-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="third-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+        </div>
+        <button id="first-step" >first step button</button>
+        <button id="second-step" >second step button</button>
+        <button id="third-step" >third step button</button>
+    </div>    <div class="">
+        <div class="form-steps__wrapper">
+            <div class="first-step__wrapper">
+                <img class="grey-arrow" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow active" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="second-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="third-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+        </div>
+        <button id="first-step" >first step button</button>
+        <button id="second-step" >second step button</button>
+        <button id="third-step" >third step button</button>
+    </div>    <div class="">
+        <div class="form-steps__wrapper">
+            <div class="first-step__wrapper">
+                <img class="grey-arrow" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow active" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="second-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="third-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+        </div>
+        <button id="first-step" >first step button</button>
+        <button id="second-step" >second step button</button>
+        <button id="third-step" >third step button</button>
+    </div>    <div class="">
+        <div class="form-steps__wrapper">
+            <div class="first-step__wrapper">
+                <img class="grey-arrow" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow active" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="second-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="third-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+        </div>
+        <button id="first-step" >first step button</button>
+        <button id="second-step" >second step button</button>
+        <button id="third-step" >third step button</button>
+    </div>    <div class="">
+        <div class="form-steps__wrapper">
+            <div class="first-step__wrapper">
+                <img class="grey-arrow" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow active" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="second-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="third-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+        </div>
+        <button id="first-step" >first step button</button>
+        <button id="second-step" >second step button</button>
+        <button id="third-step" >third step button</button>
+    </div>    <div class="">
+        <div class="form-steps__wrapper">
+            <div class="first-step__wrapper">
+                <img class="grey-arrow" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow active" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="second-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+            <div class="third-step__wrapper">
+                <img class="grey-arrow active" src="./img/white-arrow.svg" alt="">
+                <img class="green-arrow" src="./img/green-arrow.svg" alt="">
+                <div class="step-text">Step</div>
+            </div>
+        </div>
+        <button id="first-step" >first step button</button>
+        <button id="second-step" >second step button</button>
+        <button id="third-step" >third step button</button>
+    </div>
+    <!-- <script src="./js/test.js"></script> -->
+    
+</body>
+</html>
